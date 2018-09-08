@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Guess Game - Home</title>
+
+  <!-- Bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body>
+
+<!--_________________________Navbar BEGIN____________________________-->
+    <div id = "navbarBackground"> <!--Wrapper that will serve as the navbar background-->
+
+        <div id = "navbarWrapper"> <!--Wrapper for adjusting navbar width-->
+
+            <nav class="navbar navbar-expand-md navbar-light">
+                
+                
+                <a class="navbar-brand text-white" href="#">Pablo Dubcovsky</a>
+
+                <!--Collapsible hamburguer button with About, Portfolio and Contact links-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarElements" aria-controls="navbarElements" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Navbar elements and links-->
+                <div class="collapse navbar-collapse" id="navbarElements">
+                    <ul class="navbar-nav ml-auto float-sm-right">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="MiddleNavButton" href="portfolio.html">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+<!--_________________________Navbar END____________________________-->
+
+<!-- ___________________________MAIN Container BEGIN_____________________________ -->
+    <div class="container" id="mainContainer"> 
+
+        <div class ="row udSectionHeader mr-sm-auto ml-sm-auto">
+            <h1 class="font-weight-bold">About Me</h1>
+        </div>
+
+        <!--First row with profile image and 1st paragraph-->
+        <div class="row">
+        
+            <!--Left column with thumbnail-->
+            <div class="col-lg-3 col-md-4 col-sm-12 my-auto text-center">
+                <img src="assets/images/ProfilePic.jpg" alt="Profile Pic" class="img-thumbnail">
+            </div>
+
+            <!--Right column with 1st paragraph-->
+            <div class="col-lg-9 col-md-8 col-sm-12">
+                <p>
+                    So… there we were, just three average coworkers in a room. Cold sweat running down our backs, staring at a screen in utter despair. Almost half a year's worth of processed data defiled by a sadistic query that'd been run with the wrong parameters. Hundredths of man-hours lost in mere minutes, and we had to recover it by the end of the week. I was the “Excel guy” (every office's got one). There isn’t really much more to the story, no evil plot to conquer the mortgage credit business, no romance, no ultra hacking typing on two keyboards at the same time. We were done by the following day. A couple of things stuck with me.
+                </p>
+            </div>
+        </div>
+        
+        <!--Second row with 2nd paragraph-->
+        <div class ="row">
+            <div class="col-12">
+                <p>
+                    First, coffee will kill me, and I’ll die a happy man. Secondly, that through careful planning, by relying on each other’s strengths, and just using a series of simple scripts, three persons were able to redo hundredths of hours of work in a single day.
+                </p>
+            </div>
+        </div>
+
+        <!--Third row with 3rd paragraph-->
+        <div class ="row">
+            <div class="col-12">
+                <p>
+                    I’ve since studied code on my own, learned to use SQL, S-plus, a little bit of java and C#, and, of course, honed even more my Excel-fu. I’m Pablo Dubcovsky, an economist that enjoys min-maxing everything. I love playing and breaking videogames (bugs are cool). I’m ashamed to admit it, but I've committed murder; my first Android phone didn’t survive me violating its partitions and OS, in the most despicable manner, just to see how it worked. This basic portfolio, as small and simple as it may seem, has proven to be a lot of fun, a good challenge, and an important step to acquire the skills needed to stay moving forward in this world, where the universal language that binds everything together is spoken by machines. Hope you enjoy it!        
+                </p>
+            </div>
+        </div>
+    </div>
+<!-- _________________________MAIN Container END________________________________ --> 
+
+<div class="emptyBottomSpace"></div> <!--Pushes the footer down, so there's empty space for the content-->
+
+<footer class="footer">
+    <div id="FooterThinLine"></div>
+    <div id="FooterThickLine">Copyright ©</div>
+</footer>
+    
+<!--Game JavaScript-->
+    <script src="assets/javascript/game.js"></script>
+<!--Import Bootstrap JavaScript for dynamic elements-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
