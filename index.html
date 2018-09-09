@@ -9,89 +9,171 @@
   <!-- Bootstrap stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans|Raleway" rel="stylesheet">
+
   <!-- Custom stylesheet -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
 <body>
 
+<!--
+    NOTE
+    User defined classes, used for custom style.css have [ud][name] syntax.
+-->
+
 <!--_________________________Navbar BEGIN____________________________-->
-    <div id = "navbarBackground"> <!--Wrapper that will serve as the navbar background-->
-
-        <div id = "navbarWrapper"> <!--Wrapper for adjusting navbar width-->
-
-            <nav class="navbar navbar-expand-md navbar-light">
-                
-                
-                <a class="navbar-brand text-white" href="#">Pablo Dubcovsky</a>
-
-                <!--Collapsible hamburguer button with About, Portfolio and Contact links-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarElements" aria-controls="navbarElements" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!--Navbar elements and links-->
-                <div class="collapse navbar-collapse" id="navbarElements">
-                    <ul class="navbar-nav ml-auto float-sm-right">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="MiddleNavButton" href="portfolio.html">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </nav>
-        </div>
-    </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand text-white" href="#">Word Guess Game</a>
+    </nav>
 <!--_________________________Navbar END____________________________-->
 
 <!-- ___________________________MAIN Container BEGIN_____________________________ -->
-    <div class="container" id="mainContainer"> 
+    <div class="container bg-black mx-auto" id="mainContainer"> 
 
-        <div class ="row udSectionHeader mr-sm-auto ml-sm-auto">
-            <h1 class="font-weight-bold">About Me</h1>
-        </div>
-
-        <!--First row with profile image and 1st paragraph-->
-        <div class="row">
-        
-            <!--Left column with thumbnail-->
-            <div class="col-lg-3 col-md-4 col-sm-12 my-auto text-center">
-                <img src="assets/images/ProfilePic.jpg" alt="Profile Pic" class="img-thumbnail">
+        <!--Main header-->
+        <div class ="row udSectionHeader text-center border-0 bg-black py-5">
+            <div class="col-6 bg-black border-0">
+                <img class="card-img-top bg-black mx-auto w-50" src="assets/img/starWars.jpg" alt="StarWars">
             </div>
-
-            <!--Right column with 1st paragraph-->
-            <div class="col-lg-9 col-md-8 col-sm-12">
-                <p>
-                    So… there we were, just three average coworkers in a room. Cold sweat running down our backs, staring at a screen in utter despair. Almost half a year's worth of processed data defiled by a sadistic query that'd been run with the wrong parameters. Hundredths of man-hours lost in mere minutes, and we had to recover it by the end of the week. I was the “Excel guy” (every office's got one). There isn’t really much more to the story, no evil plot to conquer the mortgage credit business, no romance, no ultra hacking typing on two keyboards at the same time. We were done by the following day. A couple of things stuck with me.
-                </p>
+            <div class="col-6 bg-black border-0 my-auto">
+                <h3 class="text-center udMainHeader">Word Guess Game</h3>        
             </div>
         </div>
-        
-        <!--Second row with 2nd paragraph-->
-        <div class ="row">
+
+        <!--First row with Difficulty and New Game-->
+        <div class="row" id="divNewGame">
             <div class="col-12">
-                <p>
-                    First, coffee will kill me, and I’ll die a happy man. Secondly, that through careful planning, by relying on each other’s strengths, and just using a series of simple scripts, three persons were able to redo hundredths of hours of work in a single day.
-                </p>
-            </div>
-        </div>
+                <h4 class="text-warning text-center bg-black">Select a difficulty to begin...</h4>
 
-        <!--Third row with 3rd paragraph-->
-        <div class ="row">
-            <div class="col-12">
-                <p>
-                    I’ve since studied code on my own, learned to use SQL, S-plus, a little bit of java and C#, and, of course, honed even more my Excel-fu. I’m Pablo Dubcovsky, an economist that enjoys min-maxing everything. I love playing and breaking videogames (bugs are cool). I’m ashamed to admit it, but I've committed murder; my first Android phone didn’t survive me violating its partitions and OS, in the most despicable manner, just to see how it worked. This basic portfolio, as small and simple as it may seem, has proven to be a lot of fun, a good challenge, and an important step to acquire the skills needed to stay moving forward in this world, where the universal language that binds everything together is spoken by machines. Hope you enjoy it!        
-                </p>
+                <!--4 columns with difficulty settings-->
+                <div class="row mx-auto">
+
+                    <!--Progress-->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card udClickable h-100" id ="btnProgressDifficulty">
+                            <img class="card-img-top bg-dark img-thumbnail" src="assets/img/difficulty_progress_sm.jpg" alt="Progress">
+                            <div class="card-body bg-dark">
+                                <h5 class="card-title text-center text-light font-weight-bold">Progress</h5>
+                                <p class="card-text text-center text-white"><small>Starts easy, difficulty ramps up as you win.</small></p>
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <!--Easy--> 
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card udClickable h-100" id ="btnEasyDifficulty">
+                            <img class="card-img-top bg-dark img-thumbnail" src="assets/img/difficulty_easy_sm.jpg" alt="Easy">
+                            <div class="card-body bg-dark">
+                                <h5 class="card-title text-center text-success font-weight-bold">Easy</h5>
+                                <p class="card-text text-center text-white"><small>Short simple words, 12 tries.</small></p>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <!--Medium-->
+                    <div class="col-md-3 col-sm-6 col-xs-12"> 
+                        <div class="card udClickable h-100" id ="btnMediumDifficulty">
+                            <img class="card-img-top bg-dark img-thumbnail" src="assets/img/difficulty_medium_sm.jpg" alt="Medium">
+                            <div class="card-body bg-dark">
+                                <h5 class="card-title text-center text-warning font-weight-bold">Medium</h5>
+                                <p class="card-text text-center text-white"><small>Regular lenght words, 9 tries to get it right.</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Hard-->
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card udClickable h-100" id ="btnHardDifficulty">
+                            <img class="card-img-top bg-dark img-thumbnail" src="assets/img/difficulty_hard_sm.jpg" alt="Progress">
+                            <div class="card-body bg-dark">
+                                <h5 class="card-title text-center text-danger font-weight-bold">Hard</h5>
+                                <p class="card-text text-center text-white"><small>Difficult and long words, 6 tries to get it right.</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--4 columns with difficulty settings END-->
             </div>
-        </div>
-    </div>
-<!-- _________________________MAIN Container END________________________________ --> 
+        </div> <!--First row with Difficulty and New Game END-->
+
+<!-- ------------------Game space BEGIN---------------------- -->
+
+        <!-- --------------Info panel top BEGIN------------ -->
+        <div class="row py-3 mx-auto">
+            <!--Difficulty-->
+            <div class="col-md-6 col-sm-12">
+                <div class="card bg-dark h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning text-center">Difficulty</h5>
+                        <h6 class="card-subtitle text-center" id="infoDifficulty">Select</h6>
+                    </div>
+                </div>
+            </div>
+            <!--Winning Streak-->
+            <div class="col-md-6 col-sm-12">
+                <div class="card bg-dark h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning text-center">Streak</h5>
+                        <h6 class="card-subtitle text-center text-warning" id="infoWinningStreak">0</h6>
+                    </div>
+                </div>
+            </div>
+        </div><!-- --------------Info panel top END------------ -->
+
+        <!-- ---------------Gaming Area BEGIN---------------- -->
+        <div class="row bg-black mx-auto py-3">
+            <div class="col-12">
+                <div class="jumbotron bg-dark">
+                    <h1 class="display-4 text-center text-white" id="guessWord">_</h1>
+                    <hr class="my-4">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-5 text-center">
+                            <p class="text-warning text-center">Wrong Guesses:</p>
+                        </div>
+                        <div class="col-md-9 col-sm-7 text-center">
+                            <p class="text-white text-center" id="infoWrongGuesses"></p>
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <p class="text-white text-center">Press any letter to try to guess the word</p>
+                    <div class="row">
+                        <div class="col-6 text-center">
+                            <div class="btn btn-primary btn-lg udBtnPlay" role="button">Play Again</div>
+                        </div>
+                        <div class="col-6 text-center">
+                            <div class="btn btn-primary btn-lg udBtnPlay" role="button">Reset Score</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- ---------------Gaming Area END---------------- -->
+
+        <!-- --------------Info panel bottom BEGIN------------ -->
+        <div class="row py-3 mx-auto">
+            <!--Won-->
+            <div class="col-md-6 col-sm-12">
+                <div class="card bg-dark border-0 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning text-center">Won</h5>
+                        <h6 class="card-subtitle text-center text-warning" id="infoWon">0</h6>
+                    </div>
+                </div>
+            </div>
+            <!--Lost-->
+            <div class="col-md-6 col-sm-12">
+                <div class="card bg-dark border-0 h-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning text-center">Lost</h5>
+                        <h6 class="card-subtitle text-center text-warning" id="infoLost">0</h6>
+                    </div>
+                </div>
+            </div>
+        </div><!-- --------------Info panel bottom END------------ -->
+
+        </div><!-- ------------------Game space END---------------------- -->
+    </div><!-- _________________________MAIN Container END________________________________ --> 
 
 <div class="emptyBottomSpace"></div> <!--Pushes the footer down, so there's empty space for the content-->
 
@@ -102,6 +184,7 @@
     
 <!--Game JavaScript-->
     <script src="assets/javascript/game.js"></script>
+
 <!--Import Bootstrap JavaScript for dynamic elements-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

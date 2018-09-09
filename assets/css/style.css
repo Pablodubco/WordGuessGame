@@ -1,0 +1,50 @@
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+*/
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("../img/background.jpg");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    font-family: 'Raleway', sans-serif !important;
+}
+
+hr{
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.udSectionHeader{
+    background-color:black;
+    padding: 0px;
+}
+
+.udClickable{
+    cursor: pointer;
+}
+
+.udMainHeader{
+    color: rgb(255, 255, 98);
+}
+
+.bg-black{
+    background-color: black;
+}
+
+.udBtnPlay{
+    color: black;
+    background-color: rgb(223, 171, 0);
+    border: 1px solid lightgrey;
+}
+
+.udBtnPlay:hover{
+    background-color: rgb(255, 231, 123);
+    color: rgb(68, 68, 68);
+}
