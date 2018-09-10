@@ -1,14 +1,14 @@
-#WORD GUESS GAME
+# WORD GUESS GAME
 Example code on creating a Word Guess Game with several categories and word lists.
 
-##GENERAL DESCRIPTION
+## GENERAL DESCRIPTION
 The current example plays a "Word Guess Game" (aka Hangman) with 4 difficulty settings:
 * Progress
 * Easy
 * Medium
 * Hard
 
-####Game Rules
+#### Game Rules
 The game functions as follows:
 
 1. When the game starts, a list of words or short phrases ("words" from here on) is selected depending on the difficulty setting.
@@ -22,12 +22,12 @@ The game functions as follows:
 
 [Try it here](https://pablodubco.github.io/WordGuessGame/)
 
-##IMPLEMENT
-The game code is saved as an object with many configurable properties. It can be implemented on your page by copying the game object code **WordGuessGame** from the [game.js file](https://github.com/Pablodubco/WordGuessGame/blob/master/assets/javascript/game.js).
+## IMPLEMENT
+The game code is saved as an object with many configurable properties. It can be implemented on your page by copying the game object code **WordGuessGame** from the [game.js file](assets/javascript/game.js).
 
 Follow the instructions to get it running on your page as it is.
 
-####Getting started
+#### Getting started
 Create an HTML file that has at least 8 html elements (tags) with 8 different ids. The purpose of each one is to:
 
 1. Display the current game difficulty on your page.
@@ -40,6 +40,7 @@ Create an HTML file that has at least 8 html elements (tags) with 8 different id
 8. Display how many tries or guesses the player has remaining.
 
 Example:
+
 '''html
     <body>
         <div id="infoDifficulty">Difficulty</div>
@@ -67,6 +68,7 @@ Assign the following variable names to each of the 8 different html elements (ta
 NOTE: The variable names **must remain unchanged** from the ones listed here. Otherwise, the game object code must be edited to replace your own variable names.
 
 Example:
+
 '''javascript
     var infoDifficulty = document.getElementById("infoDifficulty");
     var infoWinningStreak = document.getElementById("infoWinningStreak");
@@ -83,6 +85,7 @@ Copy the **WordGuessGame** object code inside your script file.
 Edit the **arWordListMaster** property of the "WordGuessGame" object with your own desired word lists.
 
 Example:
+
 '''javascript
     arWordListMaster: [ 
         wordListVeryEasy = [
@@ -95,6 +98,7 @@ Example:
 Create an event to call on the game method **mStartGame(difficulty)** with the desired difficulty string as an argument. The desired difficulties can be any of the following "Progress", "Easy", "Medium", "Hard".
 
 Example:
+
 '''javascript
     var btnEasyDifficulty = document.getElementById("btnEasyDifficulty");
     btnEasyDifficulty.onclick = function(){
@@ -102,7 +106,7 @@ Example:
     }
 ´´´
 
-####Additional considerations
+#### Additional considerations
 
 The difficulty settings are really just 5 different categories, each with their own word list. These are named inside the **arDifficulty** object property as part of an array. In the code, they are refered to as:
 
@@ -119,13 +123,14 @@ By editing the code you can turn them into "theme" categories instead of difficu
 * Historical Figures, etc...
 
 Example:
+
 '''javascript
     var WordGuessGame = {
     arDifficulty: ["Animals","Vehicles","Historical Figures"],
     ...
 '''
 
-######Important! Have as may categories as word lists
+###### Important! Have as may categories as word lists
 
 The "*Progress*" difficulty setting is a special setting that changes categories every time the character gets a set number of consecutive wins. This number is inside the **intProgressRamp** object property.
 
@@ -142,8 +147,8 @@ Example:
     }
 '''
 
-######Important. Make sure the words in the word lists are all UPPERCASE.
+###### Important. Make sure the words in the word lists are all UPPERCASE.
 
-##License
+## License
 
 The project is licensed under [GNU GENERAL PUBLIC LICENSE, Version 3, 29 June 2007](http://www.gnu.org/licenses/gpl.html)
