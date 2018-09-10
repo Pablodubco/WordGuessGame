@@ -268,7 +268,7 @@ var WordGuessGame = {
 window.onload = function(event){
     console.log("Hey there!");
     console.log("Peaking at the console will give you the game word list, the current word to guess, and an event each time a key is pressed");
-    console.log("For testing purposes, alter the flow of the game changing the following variables:");
+    console.log("For testing purposes, alter the flow of the game changing the following properties within the WordGuessGame object:");
     console.log("___Game flow variables___\\\\");
     console.log("strPreviousDifficulty: last selected difficulty setting. Used when changing difficulties, to reset word list");
     console.log("------")
