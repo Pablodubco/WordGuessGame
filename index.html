@@ -53,8 +53,8 @@
                     <!--Progress-->
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="card udClickable h-100" id ="btnProgressDifficulty">
-                            <img class="card-img-top bg-dark img-thumbnail" src="assets/img/difficulty_progress_sm.jpg" alt="Progress">
-                            <div class="card-body bg-dark">
+                            <img class="card-img-top bg-black img-thumbnail" src="assets/img/difficulty_progress_sm.jpg" alt="Progress">
+                            <div class="card-body bg-black">
                                 <h5 class="card-title text-center text-light font-weight-bold">Progress</h5>
                                 <p class="card-text text-center text-white"><small>Starts easy, difficulty ramps up as you win.</small></p>
                             </div>
@@ -64,8 +64,8 @@
                     <!--Easy--> 
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="card udClickable h-100" id ="btnEasyDifficulty">
-                            <img class="card-img-top bg-dark img-thumbnail" src="assets/img/difficulty_easy_sm.jpg" alt="Easy">
-                            <div class="card-body bg-dark">
+                            <img class="card-img-top bg-black img-thumbnail" src="assets/img/difficulty_easy_sm.jpg" alt="Easy">
+                            <div class="card-body bg-black">
                                 <h5 class="card-title text-center text-success font-weight-bold">Easy</h5>
                                 <p class="card-text text-center text-white"><small>Short simple words, 12 tries.</small></p>
                             </div>
@@ -75,8 +75,8 @@
                     <!--Medium-->
                     <div class="col-md-3 col-sm-6 col-xs-12"> 
                         <div class="card udClickable h-100" id ="btnMediumDifficulty">
-                            <img class="card-img-top bg-dark img-thumbnail" src="assets/img/difficulty_medium_sm.jpg" alt="Medium">
-                            <div class="card-body bg-dark">
+                            <img class="card-img-top bg-black img-thumbnail" src="assets/img/difficulty_medium_sm.jpg" alt="Medium">
+                            <div class="card-body bg-black">
                                 <h5 class="card-title text-center text-warning font-weight-bold">Medium</h5>
                                 <p class="card-text text-center text-white"><small>Regular lenght words, 9 tries to get it right.</small></p>
                             </div>
@@ -86,8 +86,8 @@
                     <!--Hard-->
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="card udClickable h-100" id ="btnHardDifficulty">
-                            <img class="card-img-top bg-dark img-thumbnail" src="assets/img/difficulty_hard_sm.jpg" alt="Progress">
-                            <div class="card-body bg-dark">
+                            <img class="card-img-top bg-black img-thumbnail" src="assets/img/difficulty_hard_sm.jpg" alt="Progress">
+                            <div class="card-body bg-black">
                                 <h5 class="card-title text-center text-danger font-weight-bold">Hard</h5>
                                 <p class="card-text text-center text-white"><small>Difficult and long words, 6 tries to get it right.</small></p>
                             </div>
@@ -104,8 +104,9 @@
         <div class="row py-3 mx-auto">
             <!--Difficulty-->
             <div class="col-md-6 col-sm-12">
-                <div class="card bg-dark h-100">
-                    <div class="card-body">
+                <div class="card h-100" id="cardInfoDifficulty">
+                    <img class="card-img" src="assets/img/background_figth.jpg" alt="Card image">
+                    <div class="card-img-overlay">
                         <h5 class="card-title text-warning text-center">Difficulty</h5>
                         <h6 class="card-subtitle text-center" id="infoDifficulty">Select</h6>
                     </div>
@@ -113,8 +114,9 @@
             </div>
             <!--Winning Streak-->
             <div class="col-md-6 col-sm-12">
-                <div class="card bg-dark h-100">
-                    <div class="card-body">
+                <div class="card h-100" id="cardInfoStreak">
+                    <img class="card-img" src="assets/img/background_stormtrooper.jpg" alt="Card image">
+                    <div class="card-img-overlay">
                         <h5 class="card-title text-warning text-center">Streak</h5>
                         <h6 class="card-subtitle text-center text-warning" id="infoWinningStreak">0</h6>
                     </div>
@@ -125,25 +127,26 @@
         <!-- ---------------Gaming Area BEGIN---------------- -->
         <div class="row bg-black mx-auto py-3">
             <div class="col-12">
-                <div class="jumbotron bg-dark">
-                    <h1 class="display-4 text-center text-white" id="guessWord">_</h1>
+                <div class="jumbotron bg-dark" id ="GamingArea">
+                    <h2 class="display-4 text-center text-white" id="guessWord">_</h2>
                     <hr class="my-4">
                     <div class="row">
                         <div class="col-md-3 col-sm-5 text-center">
-                            <p class="text-warning text-center">Wrong Guesses:</p>
+                            <h4 class="text-warning text-center">Wrong Guesses:</h4>
+                            <h6 class="text-warning text-center" id="infoRemainingGuesses">(0 remaining)</h6>
                         </div>
-                        <div class="col-md-9 col-sm-7 text-center">
-                            <p class="text-white text-center" id="infoWrongGuesses"></p>
+                        <div class="col-md-9 col-sm-7">
+                            <h4 class="text-white text-left" id="infoWrongGuesses"></h4>
                         </div>
                     </div>
                     <hr class="my-4">
-                    <p class="text-white text-center">Press any letter to try to guess the word</p>
+                    <h5 class="text-white text-center" id="infoMessage"></h5>
                     <div class="row">
                         <div class="col-6 text-center">
-                            <div class="btn btn-primary btn-lg udBtnPlay" role="button">Play Again</div>
+                            <div class="btn btn-primary btn-lg udBtnPlay" role="button" id="btnPlayAgain">Play Again</div>
                         </div>
                         <div class="col-6 text-center">
-                            <div class="btn btn-primary btn-lg udBtnPlay" role="button">Reset Score</div>
+                            <div class="btn btn-primary btn-lg udBtnPlay" role="button" id="btnResetScore">Reset Score</div>
                         </div>
                     </div>
                 </div>
@@ -154,8 +157,9 @@
         <div class="row py-3 mx-auto">
             <!--Won-->
             <div class="col-md-6 col-sm-12">
-                <div class="card bg-dark border-0 h-100">
-                    <div class="card-body">
+                <div class="card h-100">
+                    <img class="card-img" src="assets/img/background_boba.jpg" alt="Card image">
+                    <div class="card-img-overlay">
                         <h5 class="card-title text-warning text-center">Won</h5>
                         <h6 class="card-subtitle text-center text-warning" id="infoWon">0</h6>
                     </div>
@@ -163,8 +167,9 @@
             </div>
             <!--Lost-->
             <div class="col-md-6 col-sm-12">
-                <div class="card bg-dark border-0 h-100">
-                    <div class="card-body">
+                <div class="card h-100 borde-secondary">
+                    <img class="card-img" src="assets/img/background_deathstar.jpg" alt="Card image">
+                    <div class="card-img-overlay">
                         <h5 class="card-title text-warning text-center">Lost</h5>
                         <h6 class="card-subtitle text-center text-warning" id="infoLost">0</h6>
                     </div>
@@ -179,7 +184,7 @@
 
 <footer class="footer">
     <div id="FooterThinLine"></div>
-    <div id="FooterThickLine">Copyright ©</div>
+    <div class="bg-dark text-white text-center" id="FooterThickLine">Copyright ©</div>
 </footer>
     
 <!--Game JavaScript-->
@@ -189,7 +194,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
