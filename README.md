@@ -41,18 +41,16 @@ Create an HTML file that has at least 8 html elements (tags) with 8 different id
 
 Example:
 
-'''html
-    <body>
-        <div id="infoDifficulty">Difficulty</div>
-        <div id="infoWinningStreak">0</div>
-        <div id="infoGamesWon">0</div>
-        <div id="infoGamesLost">0</div>
-        <div id="infoMessage">Select difficulty to begin!</div>
-        <div id="guessWord">_</div>
-        <div id="infoWrongGuesses"></div>
-        <div id="infoRemainingGuesses"></div>
-    </body>
-'''
+```html
+    <div id="infoDifficulty">Difficulty</div>
+    <div id="infoWinningStreak">0</div>
+    <div id="infoGamesWon">0</div>
+    <div id="infoGamesLost">0</div>
+    <div id="infoMessage">Select difficulty to begin!</div>
+    <div id="guessWord">_</div>
+    <div id="infoWrongGuesses"></div>
+    <div id="infoRemainingGuesses"></div>
+```
 
 Assign the following variable names to each of the 8 different html elements (tags). Respectively:
 
@@ -69,7 +67,7 @@ NOTE: The variable names **must remain unchanged** from the ones listed here. Ot
 
 Example:
 
-'''javascript
+```javascript
     var infoDifficulty = document.getElementById("infoDifficulty");
     var infoWinningStreak = document.getElementById("infoWinningStreak");
     var infoWon = document.getElementById("infoWon");
@@ -78,7 +76,7 @@ Example:
     var guessWord = document.getElementById("guessWord");
     var infoWrongGuesses = document.getElementById("infoWrongGuesses");
     var infoRemainigGuesses = document.getElementById("infoRemainingGuesses");
-'''
+```
 
 Copy the **WordGuessGame** object code inside your script file.
 
@@ -86,25 +84,25 @@ Edit the **arWordListMaster** property of the "WordGuessGame" object with your o
 
 Example:
 
-'''javascript
+```javascript
     arWordListMaster: [ 
         wordListVeryEasy = [
             "CHICKEN","EGG","COW"
         ],
         wordListEasy = [
         ...
-'''
+```
 
 Create an event to call on the game method **mStartGame(difficulty)** with the desired difficulty string as an argument. The desired difficulties can be any of the following "Progress", "Easy", "Medium", "Hard".
 
 Example:
 
-'''javascript
+```javascript
     var btnEasyDifficulty = document.getElementById("btnEasyDifficulty");
     btnEasyDifficulty.onclick = function(){
         WordGuessGame.mStartGame("Easy");
     }
-´´´
+```
 
 #### Additional considerations
 
@@ -124,11 +122,11 @@ By editing the code you can turn them into "theme" categories instead of difficu
 
 Example:
 
-'''javascript
+```javascript
     var WordGuessGame = {
     arDifficulty: ["Animals","Vehicles","Historical Figures"],
     ...
-'''
+```
 
 ###### Important! Have as may categories as word lists
 
@@ -141,11 +139,12 @@ Make sure to take a look at the **mSetWordList** method code. As it stands now, 
 
 You can edit it so that it only takes the corresponding category list. 
 Example:
-'''javascript
+
+```javascript
     mSetWordList: function(difficulty){
         this.arWordListGame = this.arWordListMaster[this.arDifficulty.indexOf(difficulty)];
     }
-'''
+```
 
 ###### Important. Make sure the words in the word lists are all UPPERCASE.
 
