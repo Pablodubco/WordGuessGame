@@ -150,7 +150,6 @@ var WordGuessGame = {
 
     //---------------------Game flow methods and player interactions
     mStartGame: function(difficulty){//Start game actions.
-        
         //Difficulty string and index conrols
         var tempDifficulty = this.mDifficultyFix(difficulty);
         var tempint = this.arDifficulty.indexOf(tempDifficulty);
