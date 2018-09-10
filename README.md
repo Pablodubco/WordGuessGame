@@ -8,7 +8,7 @@ The current example plays a "Word Guess Game" (aka Hangman) with 4 difficulty se
 * Medium
 * Hard
 
-#### Game Rules
+### Game Rules
 The game functions as follows:
 
 1. When the game starts, a list of words or short phrases ("words" from here on) is selected depending on the difficulty setting.
@@ -27,7 +27,7 @@ The game code is saved as an object with many configurable properties. It can be
 
 Follow the instructions to get it running on your page as it is.
 
-#### Getting started
+### Getting started
 Create an HTML file that has at least 8 html elements (tags) with 8 different ids. The purpose of each one is to:
 
 1. Display the current game difficulty on your page.
@@ -104,7 +104,7 @@ Example:
     }
 ```
 
-#### Additional considerations
+### Additional considerations
 
 The difficulty settings are really just 5 different categories, each with their own word list. These are named inside the **arDifficulty** object property as part of an array. In the code, they are refered to as:
 
@@ -128,7 +128,7 @@ Example:
     ...
 ```
 
-###### Important! Have as may categories as word lists
+##### Important! Have as many categories as word lists and make sure the words in the word lists are all UPPERCASE.
 
 The "*Progress*" difficulty setting is a special setting that changes categories every time the character gets a set number of consecutive wins. This number is inside the **intProgressRamp** object property.
 
@@ -146,7 +146,7 @@ Example:
     }
 ```
 
-###### Important. Make sure the words in the word lists are all UPPERCASE.
+##### Important! The string argument passed on to the **mGameStart** method has to match at least one of the items in the **arDifficulty** array in order for the game to start and generate appropriate word lists.
 
 ## License
 
