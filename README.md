@@ -21,8 +21,10 @@ The game functions as follows:
 8. If the player guesses all the characters, it's a win. If the player runs out of tries, it's game lost.
 
 [Try it here](https://pablodubco.github.io/WordGuessGame/)
+____________________________________________________________
 
 ## IMPLEMENT
+
 The game code is saved as an object with many configurable properties. It can be implemented on your page by copying the game object code **WordGuessGame** from the [game.js file](assets/javascript/game.js).
 
 Follow the instructions to get it running on your page as it is.
@@ -104,6 +106,20 @@ Example:
     }
 ```
 
+Finally, create an event to set the value of **strGuess** property and call on the game method **mEvaluateGuess(guess)** with the player's input. In this example, the event "listens" for keyboard input, but it can be adjusted to clickable buttons for each character.
+
+Example:
+
+```javascript
+    //When player presses a key
+    document.onkeyup = function(event){
+        WordGuessGame.strGuess = event.key.toUpperCase();
+        mEvaluateGuess(WordGuessGame.strGuess);
+    }
+```
+
+> **NOTE:** The string argument passed on to the **mGameStart** method has to match at least one of the items in the **arDifficulty** array in order for the game to start and generate appropriate word lists.
+
 ### Additional considerations
 
 The difficulty settings are really just 5 different categories, each with their own word list. These are named inside the **arDifficulty** object property as part of an array. In the code, they are refered to as:
@@ -128,9 +144,9 @@ Example:
     ...
 ```
 
-##### Important! Have as many categories as word lists and make sure the words in the word lists are all UPPERCASE.
+> **NOTE:** Have as many categories as word lists and make sure the words in the word lists are all UPPERCASE.
 
-The "*Progress*" difficulty setting is a special setting that changes categories every time the character gets a set number of consecutive wins. This number is inside the **intProgressRamp** object property.
+The "*Progress*" difficulty setting is a special setting that changes categories every time the player gets a set number of consecutive wins. This number is inside the **intProgressRamp** object property.
 
 Make sure to take a look at the **mSetWordList** method code. As it stands now, it lumps together some difficulties (categories) as follows:
 
@@ -145,8 +161,6 @@ Example:
         this.arWordListGame = this.arWordListMaster[this.arDifficulty.indexOf(difficulty)];
     }
 ```
-
-##### Important! The string argument passed on to the **mGameStart** method has to match at least one of the items in the **arDifficulty** array in order for the game to start and generate appropriate word lists.
 
 ## License
 

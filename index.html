@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Word Guess Game - Home</title>
+  <title>Word Guess Game</title>
 
   <!-- Bootstrap stylesheet -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-  <!--Fonts-->
+  <!--Fonts and icons-->
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Nunito+Sans|Raleway" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- Custom stylesheet -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
@@ -23,10 +24,38 @@
     User defined classes, used for custom style.css have [ud][name] syntax.
 -->
 
-<!--_________________________Navbar BEGIN____________________________-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <!--_________________________Navbar BEGIN____________________________-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-darker">
         <a class="navbar-brand text-white" href="#">Word Guess Game</a>
+        <!--Collapsible hamburguer button with About, Portfolio and Contact links-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarElements" aria-controls="navbarElements" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Navbar elements and links-->
+        <div class="collapse navbar-collapse" id="navbarElements">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle udDropDown d-none d-md-block" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            About
+                        </a>
+                        <div class="dropdown-menu bg-darker" aria-labelledby="dropdownMenuButton">
+                            <h6 class="dropdown-header text-white">Star Wars Word Guess Game</h6>
+                            <a class="dropdown-item nav-item text-white" href="https://pablodubco.github.io"><small>Pablo Dubcovsky <i class="fa fa-external-link"></i></small></a>
+                            <p class="dropdown-header text-white py-0 text-right"><small>2018</small></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-md-none d-block" href="https://pablodubco.github.io"> Pablo Dubcovsky - 2018 <i class="fa fa-external-link"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/Pablodubco/WordGuessGame"> Project Page <i class="fa fa-github"></i></a>
+                </li>
+            </ul>
+        </div>
     </nav>
+    <div id="FooterThinLine"></div>
 <!--_________________________Navbar END____________________________-->
 
 <!-- ___________________________MAIN Container BEGIN_____________________________ -->
@@ -180,12 +209,11 @@
         </div><!-- ------------------Game space END---------------------- -->
     </div><!-- _________________________MAIN Container END________________________________ --> 
 
-<div class="emptyBottomSpace"></div> <!--Pushes the footer down, so there's empty space for the content-->
-
-<footer class="footer">
-    <div id="FooterThinLine"></div>
-    <div class="bg-dark text-white text-center" id="FooterThickLine">Copyright ©</div>
-</footer>
+    <div class="emptyBottomSpace"></div> <!--Pushes the footer down, so there's empty space for the content-->
+    <footer class="footer">
+        <div id="FooterThinLine"></div>
+        <div class="bg-darker text-white text-center" id="FooterThickLine">Copyright © Pablo Dubcovsky 2018</div>
+    </footer>
     
 <!--Game JavaScript-->
     <script src="assets/javascript/game.js"></script>
